@@ -8,6 +8,8 @@ const zoom = document.querySelector(".intro img");
 zoom.addEventListener("mouseenter", ()=>{
     zoom.style.transform = "scale(1.2)";
     zoom.style.transition = "all 0.3s"
+
+    
 })
 
 // mouse leave event
@@ -40,7 +42,7 @@ changeImg.addEventListener("dblclick", () => {
 
 // click event
 document.querySelectorAll("h4").forEach(item => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (event) => {
       item.style.color="pink";
     })
   })
@@ -92,6 +94,15 @@ window.addEventListener('scroll', () => {
     backColor.style.backgroundColor="slategray";
   })
 
+// Stop propagation
+const body = document.querySelector("body");
+
+body.addEventListener("click", (event) => {
+ body.style.backgroundColor="indigo";
+//   console.log("end")
+  event.stopPropagation();
+})
+
   // Prevent default action
 const stopLink = document.querySelector(".nav-link");
 
@@ -99,3 +110,4 @@ stopLink.addEventListener("click", (event) => {
   console.log("stopped link");
   event.preventDefault();
 })
+
