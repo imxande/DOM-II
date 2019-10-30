@@ -91,3 +91,11 @@ const backColor = document.querySelector("body");
 window.addEventListener('scroll', () => {
     backColor.style.backgroundColor="slategray";
   })
+
+  // Prevent default action
+const stopLink = document.querySelector(".nav-link");
+
+stopLink.addEventListener("click", (event) => {
+  console.log("stopped link");
+  event.preventDefault();
+})
