@@ -33,7 +33,7 @@ bigImg.addEventListener("wheel", ()=>{
 
 // double click event
 const changeImg = document.querySelector('.content-destination img');
-console.log(changeImg);
+// console.log(changeImg);
 changeImg.addEventListener("dblclick", () => {
   changeImg.src = "https://images.unsplash.com/photo-1562259977-efaac75abd24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 })
@@ -56,7 +56,7 @@ document.querySelectorAll("h4").forEach(item => {
 
   // mouse enter events
   document.querySelectorAll(".destination p").forEach((bg) => {
-      console.log(bg);
+    //   console.log(bg);
     bg.addEventListener("mouseenter", () =>{
         bg.style.background = "lightgray";
     })
@@ -64,7 +64,7 @@ document.querySelectorAll("h4").forEach(item => {
 
 // mouse leaves events
 document.querySelectorAll(".destination p").forEach((bg) => {
-    console.log(bg);
+    // console.log(bg);
   bg.addEventListener("mouseleave", () =>{
       bg.style.background = "snow";
   })
@@ -72,7 +72,7 @@ document.querySelectorAll(".destination p").forEach((bg) => {
 
 // mouse enter events
 document.querySelectorAll(".content-section").forEach((bg) => {
-    console.log(bg);
+    // console.log(bg);
   bg.addEventListener("mouseenter", () =>{
       bg.style.background = "lightgray";
   })
@@ -80,8 +80,14 @@ document.querySelectorAll(".content-section").forEach((bg) => {
 
 // mouse leaves events
 document.querySelectorAll(".content-section").forEach((bg) => {
-    console.log(bg);
+    // console.log(bg);
   bg.addEventListener("mouseleave", () =>{
       bg.style.background = "white";
   })
 })
+
+// scroll event
+const backColor = document.querySelector("body");
+window.addEventListener('scroll', () => {
+    backColor.style.backgroundColor="slategray";
+  })
